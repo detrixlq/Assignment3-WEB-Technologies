@@ -30,6 +30,9 @@
               <li class="nav-item">
                   <a class="nav-link" href="http://127.0.0.1:5500/assignment1/gallery.html">Gallery</a>
                 </li>
+                <li>
+                  <a class="nav-link" href="http://127.0.0.1:5500/assignment1/events.html">Events</a>
+              </li>
             </ul>
            
           </div>
@@ -97,51 +100,41 @@
                 <hr>
                 <div style="text-align: center;">
                   <div class="dropdown">
-                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                    Your instrument:
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Link 1</a></li>
-                    <li><a class="dropdown-item" href="#">Link 2</a></li>
-                    <li><a class="dropdown-item" href="#">Link 3</a></li>
-                  </ul>
+                    <button id="dropdownButton" onclick="toggleDropdown()">Choose your instrument</button>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="#">Guitar</a>
+                        <a href="#">Drums</a>
+                        <a href="#">Vocals</a>
+                    </div>
+                    
                 </div>
                 <h1>To-Do List</h1>
-                    <input type="text" id="newTask" placeholder="Enter a new task">
-                    <button id="addTaskButton">Add Task</button>
-                    <ul id="taskList"></ul>
-                    <script src="myscripts.js"></script>
+                <div class="todo-container" >
+                    <input type="text" id="taskInput" placeholder="Add a new task">
+                    <button onclick="addTask()">Add Task</button>
+                    <ul style = "list-style-type: none;" id="taskList"></ul>
+                </div>
+
+
+                    <script src="enrollscripts.js"></script>
                 <h2>Apply now!</h2>
-                <form action="/action_page.php">
-                  <label for="name">Your Name and Surname:</label><br>
-                  <input type="text" id="fname" name="fname"><br>
-                  <label for="lname">Your instrument of choice:</label><br>
-                  <input type="text" id="lname" name="lname"><br><br>
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Submit
-                  </button>
+                </div>
+                
+               
+                <form id="myForm" style="text-align: center;">
+                  <label for="name">Name:</label><br>
+                  <input type="text" id="name" name="name"><br><br>
+          
+                  <label for="email">Email:</label><br>
+                  <input type="email" id="email" name="email"><br><br>
+          
+                  <input type="submit" value="Submit">
+              </form>
                 </form></div>
                 
-                <!-- Button trigger modal -->
+                
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: black;">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Success!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Submitted successfully! See you at our casting!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
               </div>
         </div>
         <section>
